@@ -13,7 +13,7 @@ import * as path from "path";
 import "dotenv/config";
 
 const app = express();
-const PORT = process.env.PORT || 9999;
+const PORT = process.env.PORT/* || 9999;*/;
 
 app.use(express.json({
     limit: "50mb"
