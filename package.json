@@ -1,0 +1,46 @@
+{
+  "name": "desafio-pet-finder",
+  "version": "1.0.0",
+  "license": "MIT",
+  "dependencies": {
+    "@mapbox/mapbox-gl-geocoder": "^5.0.1",
+    "@types/express": "^4.17.20",
+    "@types/jsonwebtoken": "^9.0.4",
+    "@types/mapbox__mapbox-gl-geocoder": "^4.7.7",
+    "@types/mapbox-gl": "^2.7.18",
+    "@vaadin/vaadin": "^24.2.0",
+    "algoliasearch": "^4.20.0",
+    "bootstrap-icons": "^1.11.1",
+    "cloudinary": "^1.41.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "dropzone": "^6.0.0-beta.2",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.2",
+    "lodash": "^4.17.21",
+    "mapbox-gl": "^2.15.0",
+    "nodemon": "^3.0.1",
+    "parcel": "^2.10.2",
+    "pg": "^8.11.3",
+    "pg-hstore": "^2.3.4",
+    "resend": "^2.0.0",
+    "sequelize": "^6.33.0"
+  },
+  "scripts": {
+    "dev:fe": "parcel serve ./fe-src/index.html",
+    "dev:be": "nodemon --watch ./be-src/view/index.ts --exec ts-node ./be-src/view/index.ts",
+    "build:fe": "parcel build ./fe-src/index.html",
+    "build:be": "tsc",
+    "build": "npm run build:fe && npm run build:be",
+    "sync": "ts-node ./be-src/view/sync.ts",
+    "start": "node ./be-dist/be-src/view/index.js"
+  },
+  "devDependencies": {
+    "buffer": "^6.0.3",
+    "crypto-browserify": "^3.12.0",
+    "os-browserify": "^0.3.0",
+    "path-browserify": "^1.0.1",
+    "process": "^0.11.10",
+    "stream-browserify": "^3.0.0"
+  }
+}

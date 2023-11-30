@@ -1,0 +1,11 @@
+{
+    "compilerOptions": {
+        "target": "ESNext",
+        "module": "CommonJS",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        //Al correr el comando tsc lo va a hacer a la carpeta de outDir, todo lo que esté en includes
+        "outDir": "./dist/server"
+    },
+    "includes": ["./be-src/**/*.ts"]
+}
