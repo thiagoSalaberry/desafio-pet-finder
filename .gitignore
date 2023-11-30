@@ -3,3 +3,4 @@ node_modules
 dist
 .env
 be-dist
+package-lock.json
