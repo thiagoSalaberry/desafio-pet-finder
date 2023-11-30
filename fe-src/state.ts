@@ -9,7 +9,6 @@ const state = {
     setState(newState:object) {
         this.data = newState;
         this.listeners.forEach(listener => listener());
-        console.log(`Soy el state de ${location.pathname}`, this.data);
     },
     subscribe(callback) {
         this.listeners.push(callback);
