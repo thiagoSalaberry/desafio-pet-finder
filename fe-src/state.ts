@@ -55,7 +55,7 @@ const state = {
             return false;
         }
     },
-    async authenticate():Promise<boolean> {
+    async authenticate() {
         try {
             const accessToken = localStorage.getItem("accessToken");
             if (accessToken) {
@@ -126,7 +126,7 @@ const state = {
             return false;
         }
     },
-    async uploadPetPicture(imageURL:string):Promise<string> {
+    async uploadPetPicture(imageURL:string) {
         try {
             const response = await fetch(`${API_BASE_URL}/upload-image`, {
                 method: 'POST',
@@ -136,7 +136,7 @@ const state = {
                 body: JSON.stringify({ imageURL })
             });
             if(response.ok) {
-                const imageSrc = await response.json();
+                const imageSrc:string = await response.json();
                 return imageSrc;
             };
         } catch (err) {
