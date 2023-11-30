@@ -31,7 +31,7 @@
     "dev:be": "nodemon --watch ./be-src/view/index.ts --exec ts-node ./be-src/view/index.ts",
     "build:fe": "parcel build ./fe-src/index.html",
     "build:be": "tsc",
-    "build": "npm run build:fe && npm run build:be",
+    "build": "npm run build:be && npm run build:fe",
     "sync": "ts-node ./be-src/view/sync.ts",
     "start": "node ./dist/view/index.js"
   },
