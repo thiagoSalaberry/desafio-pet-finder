@@ -5,7 +5,8 @@
         "moduleResolution": "node",
         "resolveJsonModule": true,
         //Al correr el comando tsc lo va a hacer a la carpeta de outDir, todo lo que esté en includes
-        "outDir": "./dist/server"
+        "outDir": "dist"
     },
-    "includes": ["./be-src/**/*.ts"]
+    "includes": ["./be-src/**/*.ts"],
+    "exclude": ["./fe-src"]
 }

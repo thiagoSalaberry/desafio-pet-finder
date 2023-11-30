@@ -33,7 +33,7 @@
     "build:be": "tsc",
     "build": "npm run build:fe && npm run build:be",
     "sync": "ts-node ./be-src/view/sync.ts",
-    "start": "node ./be-dist/be-src/view/index.js"
+    "start": "node ./dist/view/index.js"
   },
   "devDependencies": {
     "buffer": "^6.0.3",

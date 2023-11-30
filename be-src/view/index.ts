@@ -20,6 +20,7 @@ app.use(express.json({
 }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, "../../dist")));
+
 // (async()=>{
 //     await sequelize.sync({force: true});
 // })();
@@ -239,8 +240,8 @@ app.delete("/reports/delete", async (req:Request, res:Response) => {
     }
 });
 app.get("*", (req, res)=>{
-    const file = path.resolve(__dirname + "../../dist/index.html");
-    res.sendFile(file)
+    const file = path.resolve(__dirname, "../../dist/index.html");
+    res.sendFile(file);    
 });
 app.listen(PORT, ()=>{
     console.log(`Server is running on port http://localhost:${PORT}`);

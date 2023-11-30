@@ -144,10 +144,18 @@ customElements.define(
             });
             closeEl?.addEventListener("click", ()=>{
                 localStorage.removeItem("accessToken");
-                Router.go("/home");
+                if(location.pathname == "/home") {
+                    window.location.reload();
+                } else {
+                    Router.go("/home");
+                }
             });
             loginEl?.addEventListener("click", ()=>{
-                Router.go("/login");
+                if(location.pathname = "/login") {
+                    menuEl.classList.add("off");
+                } else {
+                    Router.go("/login");
+                }
             });
         };
     }
